@@ -24,10 +24,10 @@
 }
 
 #element {
-    background-color: #ff8a80;
+    background-color: #ff80ab;
 }
 #element p {
-    background-color: #d32f2f;
+    background-color: #c2185b;
 }
 
 #element2 {
@@ -56,6 +56,20 @@
 }
 #element5 p {
     background-color: #689f38;
+}
+
+#element6 {
+    background-color: #ff8a80;
+}
+#element6 p {
+    background-color: #d32f2f;
+}
+
+#element7 {
+    background-color: #b388ff;
+}
+#element7 p {
+    background-color: #512da8;
 }
 
 #element8 {

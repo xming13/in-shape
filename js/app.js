@@ -3133,13 +3133,13 @@ REAL.WonderGrid = function (config) {
 
         _charQuoteMapped = {
             "spiderman": "With great <em>roundness</em> comes great responsibility",
-            "superman": "I am much <em>rounder</em> than you think I am. <br>  Trust me.",
-            "minion": "<em>CircleCircleCircle</em>",
+            "superman": "I am much <em>rounder</em> than you think I am. <br> Trust me.",
+            "minion": "Hahahahahaha <em>Round</em> Butt hahahah",
             "batman": "It's not the <em>roundness</em> I am underneath, <br> but what I do that defines me.",
             "hulk": "Don't make me <em>round</em>. <br> You wouldn't like me when I'm <em>round</em>.",
             "ironman": "Is it better to be <em>flat or round</em>? <br> I say, is it too much to ask for both?",
             "joker": "Why so <em>round</em>?",
-            "wolverine": "I'm the best there is at <em>being round</em>. <br> And <em>being round</em> isn't very nice."
+            "wolverine": "I'm the best there is at <em>being round</em>. <br> And <em>being round...</em> isn't very nice."
         }
 		
 		this.modifYDOM();
