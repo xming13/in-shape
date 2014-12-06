@@ -1,0 +1,30 @@
+#element-wrapper {
+    width: 800px;
+}
+
+.perspectived {
+    width: 200px;
+    height: 200px;
+}
+
+.perspectived a img {
+    width: 200px;
+    height: 200px;
+}
+
+.perspectived a p {
+    height: 300px;
+}
+
+.perspectived a:hover p, .perspectived a.hover p {
+
+}
+
+#element {
+    background-color: #ccff90;
+}
+
+#wonder-content header {
+    text-align: center;
+    line-height: normal;
+}
