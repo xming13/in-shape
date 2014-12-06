@@ -2619,7 +2619,7 @@ this.display = function (mo,dp)
 
 var REAL = REAL || {};
 
-REAL.debug = false;
+REAL.debug = true;
 REAL.events = true;
 REAL.isChrome = navigator.userAgent.toLowerCase().indexOf('chrome') > -1;
 REAL.isIOS = (navigator.platform == "iPad" || navigator.platform == "iPhone" || navigator.platform == "iPod" || navigator.platform == "iPhone Simulator" || navigator.platform == "iPad Simulator");
@@ -2633,13 +2633,11 @@ if (REAL.debug){
 	}	
 } else {
 	// deshabilitamos la consola
-
-    // xming
 	if (!window.console) window.console = {};
-//	var disableMethods = ["log", "debug", "warn", "info"];
-//	for (var i=0; i<disableMethods.length; i++){
-//		window.console[disableMethods[i]] = function(){ };
-//	}
+	var disableMethods = ["log", "debug", "warn", "info"];
+	for (var i=0; i<disableMethods.length; i++){
+		window.console[disableMethods[i]] = function(){ };
+	}
 }
 
 // Stats
@@ -2944,10 +2942,8 @@ REAL.WonderItem = function (config) {
 	};
 	
 	this.onClick = function (e) {
-
-        // xming
-//        REAL.events.dispatch(REAL.WonderItemClick, { item: _that, element: $(this), title: $(this).find("p").html(), img: $(this).find("img").attr("src"), colour: $(this).find("p").css("background-color") });
-        REAL.events.dispatch(REAL.WonderItemClick, { item: _that, element: $(this), title: $(this).find(".hero-name").html(), quote: $(this).find(".hero-quote").html(), img: $(this).find("img").attr("src"), colour: $(this).find("p").css("background-color") });
+		
+		REAL.events.dispatch(REAL.WonderItemClick, { item: _that, element: $(this), title: $(this).find("p").html(), img: $(this).find("img").attr("src"), colour: $(this).find("p").css("background-color") });
 
 		// se marca como elegido
 		$(this).css({position: "absolute", left: _leftIni+"px", top: _topIni+"px", zIndex: 300}).find("a p").addClass("selected");
@@ -3101,8 +3097,7 @@ REAL.WonderGrid = function (config) {
 		_mouseX,
 		_mouseY,
 		_mousePoint,
-		_incScroll,
-        _charQuoteMapped; // xming
+		_incScroll;
 	
 	this.init = function (element, elementWrapper) {
 		_that			= this;
@@ -3130,17 +3125,6 @@ REAL.WonderGrid = function (config) {
 		_incScroll		= 0;
 		
 		_wonderGriding	= true;
-
-        _charQuoteMapped = {
-            "spiderman": "With great <em>roundness</em> comes great responsibility",
-            "superman": "I am much <em>rounder</em> than you think I am. <br>  Trust me.",
-            "minion": "<em>CircleCircleCircle</em>",
-            "batman": "It's not the <em>roundness</em> I am underneath, <br> but what I do that defines me.",
-            "hulk": "Don't make me <em>round</em>. <br> You wouldn't like me when I'm <em>round</em>.",
-            "ironman": "Is it better to be <em>flat or round</em>? <br> I say, is it too much to ask for both?",
-            "joker": "Why so <em>round</em>?",
-            "wolverine": "I'm the best there is at <em>being round</em>. <br> And <em>being round</em> isn't very nice."
-        }
 		
 		this.modifYDOM();
 		this.createGrid();
@@ -3148,11 +3132,8 @@ REAL.WonderGrid = function (config) {
 	};
 	
 	this.modifYDOM = function () {
-
-        // xming
-        //$('<div id="wonder-hide"></div><section id="wonder-content"><a href="#" class="close">Close</a><header></header><img src="" /></section>').appendTo("body");
-        $('<div id="wonder-hide"></div><section id="wonder-content"><a href="#" class="close">Close</a><header></header><content><div class="mirror-left"><img src="" /><p></p></div><div class="mirror-right"><img src="" /><p></p></div></content></section>').appendTo("body");
-
+		
+		$('<div id="wonder-hide"></div><section id="wonder-content"><a href="#" class="close">Close</a><header></header><img src="" /></section>').appendTo("body");
 		_hider = $("#wonder-hide");
 		_content = $("#wonder-content");
 		_contentClose = _content.find("a");
@@ -3244,33 +3225,16 @@ REAL.WonderGrid = function (config) {
 		
 		_wonderGriding = false;
 		_contentItem = e.data.item;
-
-        var sT = (REAL.isIOS)? parseInt(window.pageYOffset, 10)+"px" : $(document).scrollTop()+"px";
-
+		var sT = (REAL.isIOS)? parseInt(window.pageYOffset, 10)+"px" : $(document).scrollTop()+"px";
 		if (REAL.isIOS) _hider.css({height: $(document).height()});
 		_hider.css({top: sT}).show();
-
-        // xming
-//       <div id="wonder-hide"></div>
-// <section id="wonder-content">
-// <a href="#" class="close">Close</a>
-// <header></header>
-// <content>
-// <div class="mirror-left"><img src="" /><p></p></div>
-// <div class="mirror-right"><img src="" /><p></p></div>
-// </content>
-// </section>
-
 		setTimeout(function(){
 			_content.css({top: sT, backgroundColor: e.data.colour}).
 					find("header").html(e.data.title).end().
-					find(".mirror-left img").attr("src", e.data.img).end().
-                    find(".mirror-left p").html(e.data.quote).end().
-                    find(".mirror-right img").attr("src", e.data.img.replace(".png", "-evil.png")).end().
-                    find(".mirror-right p").html(_charQuoteMapped[e.data.title.toLocaleLowerCase()]).end().
+					find("img").attr("src", e.data.img.replace("thumbs/", "")).end().
 					fadeIn("slow");
 		}, 1000);
-
+		
 		if (!REAL.isIOS) $("body").css({overflow: "hidden"});
 	};
 	

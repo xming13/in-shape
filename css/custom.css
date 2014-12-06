@@ -13,18 +13,89 @@
 }
 
 .perspectived a p {
-    height: 300px;
+    /*height: 300px;*/
 }
 
 .perspectived a:hover p, .perspectived a.hover p {
-
+    /*margin-top: -300px;*/
+}
+.perspectived a p.selected {
+    /*margin-top: -300px;*/
 }
 
 #element {
+    background-color: #ff8a80;
+}
+#element p {
+    background-color: #d32f2f;
+}
+
+#element2 {
+    background-color: #82b1ff;
+}
+#element2 p {
+    background-color: #1976d2;
+}
+
+#element3 {
+    background-color: #ffff8d;
+}
+#element3 p {
+    background-color: #fbc02d;
+}
+
+#element4 {
+    background-color: #ccc;
+}
+#element4 p {
+    background-color: #444;
+}
+
+#element5 {
     background-color: #ccff90;
+}
+#element5 p {
+    background-color: #689f38;
+}
+
+#element8 {
+    background-color: #ffe57f;
+}
+#element8 p {
+    background-color: #ffa000;
 }
 
 #wonder-content header {
     text-align: center;
     line-height: normal;
+}
+
+#wonder-content img {
+    float: none;
+}
+
+.mirror-left, .mirror-right {
+    float:left;
+    width: 50%;
+}
+
+.mirror-left {
+    text-align: right;
+}
+
+.mirror-left p {
+    margin: 0 20px;
+    color: #EEE;
+    font-size: 20px;
+    line-height: normal;
+}
+.mirror-right p {
+    margin: 0 20px;
+    color: #111;
+    font-size: 20px;
+    line-height: normal;
+}
+
+em {
+    font-style: italic;
 }
