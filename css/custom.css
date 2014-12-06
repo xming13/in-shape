@@ -1,3 +1,20 @@
+body {
+    background: url('../images/background.png') repeat;
+}
+
+h1 {
+    text-align: inherit;
+    padding-top: 50px;
+    line-height: normal;
+    color: #1a237e;
+}
+
+h1 small {
+    font-size: 24px;
+    font-style: italic;
+    color: #6200ea;
+    text-shadow: none;
+}
 #element-wrapper {
     width: 800px;
 }
@@ -21,6 +38,15 @@
 }
 .perspectived a p.selected {
     /*margin-top: -300px;*/
+}
+
+.perspectived .hero-name {
+    padding-top: 4px;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+.perspectived .hero-quote {
+    font-size: 12px;
 }
 
 #element {
@@ -112,4 +138,14 @@
 
 em {
     font-style: italic;
+}
+
+footer p {
+    padding: 15px;
+    border: 2px solid rgb(0, 190, 215);
+    border-radius: 15px;
+    background-color: rgb(179, 244, 236);
+    font-size: 16px;
+    line-height: normal;
+    color: #555;
 }

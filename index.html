@@ -1,118 +1,123 @@
-<!DOCTYPE html>  
+<!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		
-		<title>is-real / wonder-webkit</title>
-		
-		<meta name="author" content="Is-Real" />
-		<meta name="description" content="WonderWall simulation in CSS3+JS. Only for Webkit browsers." />
-		<meta name="language" content="en" />
 
-		<meta name="robots" content="index" />
-		<meta name="viewport" content="width=1200, user-scalable=no" />
+<head>
+    <meta charset="utf-8">
 
-		<link href="favicon.ico" rel="shortcut icon" />
+    <title>I am in shape. Round is a shape.</title>
 
-        <link href="css/app.css" rel="stylesheet" type="text/css" />
-        <link href="css/custom.css" rel="stylesheet" type="text/css" />
+    <meta name="author" content="xming13" />
+    <meta name="description" content="WonderWall simulation in CSS3+JS. Only for Webkit browsers." />
+    <meta name="language" content="en" />
 
-        <!-- http://www.is-real.net/experiments/css3/wonder-webkit/ -->
-	</head>
-	<body>
-		
-		<header>
-			<hgroup>
-				<h1>wonder <span class="purple">web<strike>kit</strike></span></h1>
-				<h3>wondering uses for CSS3 3D transformations</h3>
-			</hgroup>
-			<p>A tribute to the awesome <a href="http://wonder-wall.com/" target="_blank">wonder-wall</a> by <a href="http://tha.jp/" target="_blank">tha.ltd</a>.</p>
-			<p>And a demo of <strong><strike>WebkitCSSMatrix</strike> CSS3 Matrix3D</strong>. The wonder-wall effect is inspired by <a href="http://drusunlimited.com/blog/index.php/2010/03/30/wonder-wall-like/" target="_blank">this great example</a>, the Javascript Matrix library used is <a href="http://www.cs.bham.ac.uk/~pxc/web/jslib/index.html" target="_blank">this</a>, and the book covers are taken from <a href="http://www.flickr.com/photos/joekral/sets/72157594264351021/" target="_blank">here</a>.</p>
-			<p>The interesting stuff is the possibility of manipulate the transformation matrix of any element of the DOM, In this case we get the matrix given only the 4 end points of the element, which is done porting OpenCV's <strong>cvGetPerspectiveTransform</strong> function and some trickery, the JavaScript code is <a href="http://www.is-real.net/experiments/css3/wonder-webkit/js/real/display/PerspectiveTransform.js" target="_blank">here</a>.</p>
-			<p>&nbsp;</p>
-			<p>Right now the effect <strike>only works in <strong>Safari 5</strong> (best) and <strong>Chrome 7 Dev</strong></strike> works on latest Safari, Chrome, iOS, Firefox Nightly and IE10.<br />Roll over the elements and click them.</p>
-		</header>
-		
-		<section id="element-wrapper">
-			<div id="element" class="perspectived">
-                <a href="#">
-                    <img src="images/spiderman.png" />
-                    <p>
-                        <span class="hero-name">Spiderman</span>
-                        <span class="hero-quote">With great power comes great responsibility</span>
-                    </p>
-                </a>
-            </div>
-            <div id="element2" class="perspectived">
-                <a href="#"><img src="images/superman.png" />
-                    <p>
-                        <span class="hero-name">Superman</span>
-                        <span class="hero-quote">You’re much stronger than you think you are. <br> Trust me.</span>
-                    </p>
-                </a>
-            </div>
-			<div id="element3" class="perspectived">
-                <a href="#"><img src="images/minion.png" />
-                    <p>
-                        <span class="hero-name">Minion</span>
-                        <span class="hero-quote">Hahahahahaha Butt hahahah</span>
-                    </p>
-                </a>
-            </div>
-			<div id="element4" class="perspectived">
-                <a href="#">
-                    <img src="images/batman.png" />
-                    <p>
-                        <span class="hero-name">Batman</span>
-                        <span class="hero-quote">It's not who I am underneath, <br> but what I do that defines me</span>
-                    </p>
-                </a>
-            </div>
-            <div id="element5" class="perspectived">
-                <a href="#"><img src="images/hulk.png" />
-                    <p>
-                        <span class="hero-name">Hulk</span>
-                        <span class="hero-quote">Don't make me angry. <br> You wouldn't like me when I'm angry.</span>
-                    </p>
-                </a>
-            </div>
-			<div id="element6" class="perspectived">
-                <a href="#">
-                    <img src="images/ironman.png" />
-                    <p>
-                        <span class="hero-name">Ironman</span>
-                        <span class="hero-quote">Is it better to be feared or respected? <br> I say, is it too much to ask for both?</span>
-                    </p>
-                </a>
-            </div>
-			<div id="element7" class="perspectived">
-                <a href="#">
-                    <img src="images/joker.png" />
-                    <p>
-                        <span class="hero-name">Joker</span>
-                        <span class="hero-quote">Why so serious?</span>
-                    </p>
-                </a>
-            </div>
-			<div id="element8" class="perspectived">
-                <a href="#">
-                    <img src="images/wolverine.png" />
-                    <p>
-                        <span class="hero-name">Wolverine</span>
-                        <span class="hero-quote">I'm the best there is at what I do. <br> And what I do isn't very nice.</span>
-                    </p>
-                </a>
-            </div>
-		</section>
-		
-		<footer>
-			<h3>is-real</h3>
-			<p>Say hi on Twitter <a href="http://twitter.com/is__real" target="_blank">@is__real</a>. Never have been possible without <a href="http://twitter.com/lux_culture" target="_blank">@lux_culture</a> teaching me CSS3 tricks.</p>
-		</footer>
+    <meta name="robots" content="index" />
+    <meta name="viewport" content="width=1200, user-scalable=no" />
 
-		<!-- SOURCE CODE HERE, COMBINED BUT NO COMPRESSED SO YOU CAN HAVE A LOOK -->
-		<!-- IF YOU WANT TO LOOK FOR THE SEPARATE FILES THE URL ARE LIKE THIS: js/jsMatrix/IOUtils.js or js/real/display/WonderItem.js -->
-        <script type="text/javascript" src="js/app.js"></script>
-        <script type="text/javascript" src="js/custom.js"></script>
-	</body>
+    <link href="favicon.ico" rel="shortcut icon" />
+
+    <link href="css/app.css" rel="stylesheet" type="text/css" />
+    <link href="css/custom.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <header>
+        <hgroup>
+            <h1>
+                I am in shape <small>Round is a shape</small>
+            </h1>
+        </hgroup>
+    </header>
+
+    <section id="element-wrapper">
+        <div id="element" class="perspectived">
+            <a href="#">
+                <img src="images/spiderman.png" />
+                <p>
+                    <span class="hero-name">Spiderman</span>
+                    <span class="hero-quote">With great power comes great responsibility</span>
+                </p>
+            </a>
+        </div>
+        <div id="element2" class="perspectived">
+            <a href="#">
+                <img src="images/superman.png" />
+                <p>
+                    <span class="hero-name">Superman</span>
+                    <span class="hero-quote">You’re much stronger than you think you are. <br> Trust me.</span>
+                </p>
+            </a>
+        </div>
+        <div id="element3" class="perspectived">
+            <a href="#">
+                <img src="images/minion.png" />
+                <p>
+                    <span class="hero-name">Minion</span>
+                    <span class="hero-quote">Hahahahahaha Butt hahahah</span>
+                </p>
+            </a>
+        </div>
+        <div id="element4" class="perspectived">
+            <a href="#">
+                <img src="images/batman.png" />
+                <p>
+                    <span class="hero-name">Batman</span>
+                    <span class="hero-quote">It's not who I am underneath, <br> but what I do that defines me</span>
+                </p>
+            </a>
+        </div>
+        <div id="element5" class="perspectived">
+            <a href="#">
+                <img src="images/hulk.png" />
+                <p>
+                    <span class="hero-name">Hulk</span>
+                    <span class="hero-quote">Don't make me angry. <br> You wouldn't like me when I'm angry.</span>
+                </p>
+            </a>
+        </div>
+        <div id="element6" class="perspectived">
+            <a href="#">
+                <img src="images/ironman.png" />
+                <p>
+                    <span class="hero-name">Ironman</span>
+                    <span class="hero-quote">Is it better to be feared or respected? <br> I say, is it too much to ask for both?</span>
+                </p>
+            </a>
+        </div>
+        <div id="element7" class="perspectived">
+            <a href="#">
+                <img src="images/joker.png" />
+                <p>
+                    <span class="hero-name">Joker</span>
+                    <span class="hero-quote">Why so serious?</span>
+                </p>
+            </a>
+        </div>
+        <div id="element8" class="perspectived">
+            <a href="#">
+                <img src="images/wolverine.png" />
+                <p>
+                    <span class="hero-name">Wolverine</span>
+                    <span class="hero-quote">I'm the best there is at what I do. <br> And what I do isn't very nice.</span>
+                </p>
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <p>
+            A tribute to <a href="http://www.is-real.net/" target="_blank">Israel Pastrana</a>
+            for the <a href="http://www.is-real.net/experiments/css3/wonder-webkit/" target="_blank">wonder wall</a>
+            and
+            <a href="http://www.schillmania.com/" target="_blank">Scott Schiller</a>
+            for the <a href="https://github.com/scottschiller/Snowstorm" target="_blank">snow effect</a>.
+        </p>
+    </footer>
+
+    <script src="js/app.js"></script>
+    <script src="js/snowstorm.min.js"></script>
+    <script>
+        snowStorm.flakesMaxActive = 96;
+    </script>
+</body>
+
 </html>
