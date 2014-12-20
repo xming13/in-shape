@@ -17,84 +17,102 @@
 
     <link href="css/app.css" rel="stylesheet" type="text/css" />
     <link href="css/custom.css" rel="stylesheet" type="text/css" />
+
+    <script src="js/snowstorm.min.js"></script>
+    <script>
+        snowStorm.flakesMaxActive = 96;
+    </script>
 </head>
 
-<body>
+<body class="xmas">
     <header>
         <hgroup>
             <h1>
                 I am in shape <small>Round is a shape</small>
             </h1>
         </hgroup>
+        <section class="images-wrapper">
+        </section>
     </header>
 
+    <section class="theme">
+        <a href="#" class="theme-select">
+            Theme
+            <span class="caret"></span>
+        </a>
+        <ul>
+            <li class="theme--basic">Basic</li>
+            <li class="theme--xmas">Xmas</li>
+        </ul>
+    </section>
+
     <section id="element-wrapper">
-        <div id="element" class="perspectived">
+        <div id="element" class="element perspectived">
             <a href="#">
-                <img src="images/spiderman.png" />
+                <img src="images/basic/spiderman.png" />
                 <p>
                     <span class="hero-name">Spiderman</span>
                     <span class="hero-quote">With great power comes great responsibility</span>
                 </p>
             </a>
         </div>
-        <div id="element2" class="perspectived">
+        <div id="element2" class="element perspectived">
             <a href="#">
-                <img src="images/superman.png" />
+                <img src="images/basic/superman.png" />
                 <p>
                     <span class="hero-name">Superman</span>
                     <span class="hero-quote">You’re much stronger than you think you are. <br> Trust me.</span>
                 </p>
             </a>
         </div>
-        <div id="element3" class="perspectived">
+        <div id="element3" class="element perspectived">
             <a href="#">
-                <img src="images/minion.png" />
+                <img src="images/basic/minion.png" />
                 <p>
                     <span class="hero-name">Minion</span>
                     <span class="hero-quote">Hahahahahaha Butt hahahah</span>
                 </p>
             </a>
         </div>
-        <div id="element4" class="perspectived">
+        <div id="element4" class="element perspectived">
             <a href="#">
-                <img src="images/batman.png" />
+                <img src="images/basic/batman.png" />
                 <p>
                     <span class="hero-name">Batman</span>
                     <span class="hero-quote">It's not who I am underneath, <br> but what I do that defines me</span>
                 </p>
             </a>
         </div>
-        <div id="element5" class="perspectived">
+        <div id="element5" class="element perspectived">
             <a href="#">
-                <img src="images/hulk.png" />
+                <img src="images/basic/hulk.png" />
                 <p>
                     <span class="hero-name">Hulk</span>
                     <span class="hero-quote">Don't make me angry. <br> You wouldn't like me when I'm angry.</span>
                 </p>
             </a>
         </div>
-        <div id="element6" class="perspectived">
+        <div id="element6" class="element perspectived">
             <a href="#">
-                <img src="images/ironman.png" />
+                <img src="images/basic/ironman.png" />
                 <p>
                     <span class="hero-name">Ironman</span>
                     <span class="hero-quote">Is it better to be feared or respected? <br> I say, is it too much to ask for both?</span>
                 </p>
             </a>
         </div>
-        <div id="element7" class="perspectived">
+        <div id="element7" class="element perspectived">
             <a href="#">
-                <img src="images/joker.png" />
+                <img src="images/basic/joker.png" />
                 <p>
                     <span class="hero-name">Joker</span>
                     <span class="hero-quote">Why so serious?</span>
                 </p>
             </a>
         </div>
-        <div id="element8" class="perspectived">
+        <div id="element8" class="element perspectived">
             <a href="#">
-                <img src="images/wolverine.png" />
+                <img src="images/basic/wolverine.png" />
                 <p>
                     <span class="hero-name">Wolverine</span>
                     <span class="hero-quote">I'm the best there is at what I do. <br> And what I do isn't very nice.</span>
@@ -114,9 +132,56 @@
     </footer>
 
     <script src="js/app.js"></script>
-    <script src="js/snowstorm.min.js"></script>
+
     <script>
-        snowStorm.flakesMaxActive = 96;
+        $(document).ready(function() {
+            $('.theme').hover(function() {
+                $('.theme ul').stop().animate({top: 0});
+            }, function() {
+                $('.theme ul').stop().animate({top: -120});
+            });
+
+            $('.theme ul li').click(function() {
+                $(this).siblings().removeClass('selected');
+                $(this).addClass('selected');
+
+                var selectedTheme = $(this).html().trim().toLowerCase();
+
+                $('.element a img').each(function() {
+                    var imgName = this.src.substring(this.src.lastIndexOf('/'));
+                    this.src = 'images/' + selectedTheme + '/' + imgName;
+                });
+
+                if (!$('body').hasClass(selectedTheme)) {
+                    $('body').removeClass().addClass(selectedTheme);
+                }
+
+                $('.images-wrapper').html('');
+
+                switch (selectedTheme) {
+                    case 'xmas':
+                        snowStorm.resume();
+                        var imgReindeer = new Image();
+                            imgReindeer.src = 'images/xmas/reindeer.png';
+                        var imgSanta = new Image();
+                            imgSanta.src = 'images/xmas/santa.png';
+                        var imgSnowman = new Image();
+                            imgSnowman.src = 'images/xmas/snowman.png';
+
+                        $('.images-wrapper').append(imgReindeer).append(imgSanta).append(imgSnowman);
+                        break;
+                    case 'basic':
+                    default:
+                        snowStorm.stop();
+                        break;
+                }
+
+                $('.theme-select').html('Theme <span class="caret"></span>');
+                $('.theme').mouseleave();
+            });
+
+            $('.theme--xmas').click();
+        });
     </script>
 </body>
 
