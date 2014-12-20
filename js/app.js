@@ -3134,7 +3134,7 @@ REAL.WonderGrid = function (config) {
         _charQuoteMapped = {
             "spiderman": "With great <em>roundness</em> comes great responsibility",
             "superman": "I am much <em>rounder</em> than you think I am. <br> Trust me.",
-            "minion": "Hahahahahaha <em>Round Round de</em> Butt hahahah",
+            "minion": "Hahahahahaha <br> <em>Round Round de</em> Butt <br> hahahaha",
             "batman": "It's not the <em>roundness</em> I am underneath, <br> but what I do that defines me.",
             "hulk": "Don't make me <em>round</em>. <br> You wouldn't like me when I'm <em>round</em>.",
             "ironman": "Is it better to be <em>flat or round</em>? <br> I say, is it too much to ask for both?",

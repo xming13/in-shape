@@ -1,26 +1,28 @@
-body,
-body.basic {
-    background: #9CD2F4 url('../images/basic/background.png') repeat;
+body {
+    font-family: 'Varela Round', sans-serif;
+    background: #FFF5F5 url('../images/basic/background.png') repeat;
 }
+
 body.xmas {
     background: #9CD2F4 url('../images/xmas/background.png') repeat;
 }
 
 header {
-    height: 300px;
-    margin: 0 auto 20px;
+    height: 335px;
 }
+
 h1 {
+    padding: 40px 0 15px;
     text-align: inherit;
-    padding-top: 50px;
     line-height: normal;
-    color: #1a237e;
+    font-family: 'Varela Round', sans-serif;
+    color: #1A237E;
 }
 
 h1 small {
     font-size: 24px;
     font-style: italic;
-    color: #6200ea;
+    color: #6200EA;
     text-shadow: none;
 }
 
@@ -32,36 +34,49 @@ h1 small {
     height: 40px;
     opacity: 0.5;
 }
+
 .theme:hover {
     opacity: 1;
 }
+
 .theme-select,
-.theme-select:hover{
+.theme-select:hover {
     display: block;
     height: 40px;
-    font: 16px/40px bold Verdana, Geneva, sans-serif;
+    font: 16px/40px bold 'Varela Round', sans-serif;
     text-align: center;
+    color: #FFF;
     background-color: #4C77FF;
-    color: white;
-    z-index: 1;
 }
+
 .theme ul {
     position: relative;
     top: -120px;
     z-index: -1;
 }
+
 .theme ul li {
     height: 40px;
-    font: 16px/40px bold Verdana, Geneva, sans-serif;
+    font: 16px/40px bold 'Varela Round', sans-serif;
     text-align: center;
     color: #FFF;
     background-color: #3024DF;
     cursor: pointer;
 }
+
 .theme ul li.selected,
 .theme ul li:hover {
     background-color: #04069B;
 }
+
+.theme ul li.selected:before {
+    content: '\2713';
+    position: absolute;
+    left: 5px;
+    font-size: 23px;
+    color: #C9FF00;
+}
+
 .caret {
     display: inline-block;
     width: 0;
@@ -87,93 +102,82 @@ h1 small {
     height: 200px;
 }
 
-.perspectived a p {
-    /*height: 300px;*/
-}
-
-.perspectived a:hover p, .perspectived a.hover p {
-    /*margin-top: -300px;*/
-}
-.perspectived a p.selected {
-    /*margin-top: -300px;*/
-}
-
 .perspectived .hero-name {
     padding-top: 4px;
     text-transform: uppercase;
     font-size: 16px;
 }
+
 .perspectived .hero-quote {
     font-size: 12px;
 }
 
 #element {
-    background-color: #ff80ab;
+    background-color: #FF80AB;
 }
+
 #element p {
-    background-color: #c2185b;
+    background-color: #C2185B;
 }
 
 #element2 {
-    background-color: #82b1ff;
+    background-color: #82B1FF;
 }
+
 #element2 p {
-    background-color: #1976d2;
+    background-color: #1976D2;
 }
 
 #element3 {
-    background-color: #ffff8d;
+    background-color: #FFFF8D;
 }
+
 #element3 p {
-    background-color: #fbc02d;
+    background-color: #FBC02D;
 }
 
 #element4 {
-    background-color: #ccc;
+    background-color: #CCC;
 }
+
 #element4 p {
     background-color: #444;
 }
 
 #element5 {
-    background-color: #ccff90;
+    background-color: #CCFF90;
 }
+
 #element5 p {
-    background-color: #689f38;
+    background-color: #689F38;
 }
 
 #element6 {
-    background-color: #ff8a80;
+    background-color: #FF8A80;
 }
+
 #element6 p {
-    background-color: #d32f2f;
+    background-color: #D32F2F;
 }
 
 #element7 {
-    background-color: #b388ff;
+    background-color: #B388FF;
 }
+
 #element7 p {
-    background-color: #512da8;
+    background-color: #512DA8;
 }
 
 #element8 {
-    background-color: #ffe57f;
+    background-color: #FFE57F;
 }
+
 #element8 p {
-    background-color: #ffa000;
-}
-
-#wonder-content header {
-    text-align: center;
-    line-height: normal;
-}
-
-#wonder-content img {
-    float: none;
+    background-color: #FFA000;
 }
 
 .mirror-left, .mirror-right {
-    float:left;
+    float: left;
     width: 50%;
 }
 
@@ -187,6 +191,7 @@ h1 small {
     font-size: 20px;
     line-height: normal;
 }
+
 .mirror-right p {
     margin: 0 20px;
     color: #111;

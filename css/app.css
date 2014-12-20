@@ -1,1 +1,260 @@
-html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, font, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td {margin: 0;padding: 0;border: 0;outline: 0;font-weight: inherit;font-style: inherit;font-size: 100%;font-family: inherit;vertical-align: baseline;}strong {font-weight: bold;}:focus {outline:0;}body{line-height: 1;color: #9e9e9e;background: #FFFFFF;}ol, ul {list-style: none;text-decoration: none; }table {border-collapse: separate;border-spacing: 0;}caption, th, td {text-align: left;font-weight: normal;}blockquote:before, blockquote:after, q:before, q:after {content: "";}blockquote, q {quotes: "" "";}a {text-decoration: none;}@font-face {font-family: 'LeituraSansGrot1';src: url('css_fonts/leiturasans-grot_1-webfont.eot');src: local('â˜º'), url('css_fonts/leiturasans-grot_1-webfont.woff') format('woff'), url('css_fonts/leiturasans-grot_1-webfont.ttf') format('truetype'), url('css_fonts/leiturasans-grot_1-webfont.svg#webfont') format('svg');font-weight: normal;font-style: normal;font-variant:normal;}@font-face {font-family: 'LeituraDisplaySwashes';src: url('css_fonts/leituradisplay-swashes-webfont.eot');src: local('â˜º'), url('css_fonts/leituradisplay-swashes-webfont.woff') format('woff'), url('css_fonts/leituradisplay-swashes-webfont.ttf') format('truetype'), url('css_fonts/leituradisplay-swashes-webfont.svg#webfont') format('svg');font-weight: normal;font-style: normal;font-variant:normal;}@font-face {font-family: 'LeituraDisplayItalic';src: url('css_fonts/leituradisplay-italic-webfont.eot');src: local('â˜º'), url('css_fonts/leituradisplay-italic-webfont.woff') format('woff'), url('css_fonts/leituradisplay-italic-webfont.ttf') format('truetype'), url('css_fonts/leituradisplay-italic-webfont.svg#webfont') format('svg');font-weight: normal;font-style: normal;font-variant:normal;} body {font-family: "Lucida Grande", "Lucida Sans Unicode", sans-serif;font-size: 11px;line-height: 14px;color: #6e6e6e;background-color: #e8e8e8;}h1 {padding-top: 20px;margin-left: -5px;font-family: "LeituraDisplayItalic";font-size: 75px;line-height: 75px;color: #a8a3a3;}h3 {font-family: "LeituraDisplayItalic";font-size: 30px;color: #6e6e6e;padding-bottom: 20px;}a {color: #fff;text-decoration: none;}a:hover, a.hover {color: #a8a3a3;text-decoration: none;}.purple {color: #950098;}header {clear: both;display: block;height: 300px;width: 750px;margin: 0px auto;}header a {color: #950098;}#element-wrapper {position: relative;display: block;width: 750px;margin: 0px auto 0px auto;}.perspectived {float: left;width: 150px;height: 243px;background-color: #ccc;overflow: hidden;-webkit-perspective: 500;-moz-perspective: 500;-o-perspective: 500;-ms-perspective: 500;perspective: 500;-webkit-transform-origin: left top;-moz-transform-origin: left top;-o-transform-origin: left top;-ms-transform-origin: left top;transform-origin: left top;}.perspectived img {-webkit-transition: opacity 1s ease;-moz-transition: opacity 1s ease;-o-transition: opacity 1s ease;-ms-transition: opacity 1s ease;transition: opacity 1s ease;}.perspectived a p {position: relative;display: block;margin-top: 0px;height: 343px;width: 130;padding: 10px;background-color: #ccc;color: #fff;font-weight: bold;font-size: 14px;-webkit-transition: margin-top 0.25s ease-in;-moz-transition: margin-top 0.25s ease-in;-o-transition: margin-top 0.25s ease-in;-ms-transition: margin-top 0.25s ease-in;transition: margin-top 0.25s ease-in;}.perspectived a p span {display: block;padding-top: 8px;font-size: 10px;}.perspectived a:hover p, .perspectived a.hover p {margin-top: -100px;}.perspectived a p.selected {margin-top: -343px}.perspectived a:hover p.selected, .perspectived a.hover p.selected {margin-top: -343px}.corner {position: absolute;width: 10px;height: 10px;background-color: #ccc;z-index: 20;margin-left: -5px;margin-top: -5px;cursor: move;}footer {clear: both;display: block;height: 70px;width: 750px;margin: 0px auto;padding-top: 120px;}footer h3 {padding-bottom: 0px;padding-right: 10px;margin-top: -5px;float: left;}footer a {color: #950098;}#wonder-hide {position: absolute;background-color: #000;z-index: 200;top: 0;left: 0;width: 100%;height: 100%;display: none;}#wonder-content {position: absolute;z-index: 400;top: 0;left: 0;width: 100%;height: 100%;display: none;font-family: "LeituraDisplayItalic";}#wonder-content a, #wonder-content a:visited {float: left;font-size: 20px;background-color: #000;padding: 20px 20px;margin: 0px 0px 20px 20px;color:Â #fff;}#wonder-content header {clear: both;float: left;width: 100%;padding: 20px 0 0 20px;font-size: 75px;line-height: auto;color: #fff;height: auto;}#wonder-content header span {font-size: 30px;}#wonder-content img {clear: both;float: left;margin: 40px 20px;-webkit-box-shadow: 1px 1px 8px #000;-moz-box-shadow: 1px 1px 8px #000;box-shadow: 1px 1px 8px #000;}h1 {font-family: "LeituraDisplayItalic";color: #950098;text-shadow: -2px 2px 0px #fff;font-size: 50px;width: 100%;text-align: center;}
+html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, font, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-weight: inherit;
+    font-style: inherit;
+    font-size: 100%;
+    font-family: inherit;
+    vertical-align: baseline;
+}
+
+strong {
+    font-weight: bold;
+}
+
+:focus {
+    outline: 0;
+}
+
+body {
+    line-height: 1;
+    color: #9e9e9e;
+    background: #FFFFFF;
+}
+
+ol, ul {
+    list-style: none;
+    text-decoration: none;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+caption, th, td {
+    text-align: left;
+    font-weight: normal;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+    content: "";
+}
+
+blockquote, q {
+    quotes: "" "";
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-size: 11px;
+    line-height: 14px;
+    color: #6e6e6e;
+    background-color: #e8e8e8;
+}
+
+h1 {
+    padding-top: 20px;
+    margin-left: -5px;
+    font-size: 75px;
+    line-height: 75px;
+    color: #a8a3a3;
+}
+
+h3 {
+    font-size: 30px;
+    color: #6e6e6e;
+    padding-bottom: 20px;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+a:hover, a.hover {
+    color: #a8a3a3;
+    text-decoration: none;
+}
+
+.purple {
+    color: #950098;
+}
+
+header {
+    clear: both;
+    display: block;
+    height: 300px;
+    width: 750px;
+    margin: 0px auto;
+}
+
+header a {
+    color: #950098;
+}
+
+#element-wrapper {
+    position: relative;
+    display: block;
+    width: 750px;
+    margin: 0px auto 0px auto;
+}
+
+.perspectived {
+    float: left;
+    width: 150px;
+    height: 243px;
+    background-color: #ccc;
+    overflow: hidden;
+    -webkit-perspective: 500;
+    -moz-perspective: 500;
+    -o-perspective: 500;
+    -ms-perspective: 500;
+    perspective: 500;
+    -webkit-transform-origin: left top;
+    -moz-transform-origin: left top;
+    -o-transform-origin: left top;
+    -ms-transform-origin: left top;
+    transform-origin: left top;
+}
+
+.perspectived img {
+    -webkit-transition: opacity 1s ease;
+    -moz-transition: opacity 1s ease;
+    -o-transition: opacity 1s ease;
+    -ms-transition: opacity 1s ease;
+    transition: opacity 1s ease;
+}
+
+.perspectived a p {
+    position: relative;
+    display: block;
+    margin-top: 0px;
+    height: 343px;
+    width: 130;
+    padding: 10px;
+    background-color: #ccc;
+    color: #fff;
+    font-weight: bold;
+    font-size: 14px;
+    -webkit-transition: margin-top 0.25s ease-in;
+    -moz-transition: margin-top 0.25s ease-in;
+    -o-transition: margin-top 0.25s ease-in;
+    -ms-transition: margin-top 0.25s ease-in;
+    transition: margin-top 0.25s ease-in;
+}
+
+.perspectived a p span {
+    display: block;
+    padding-top: 8px;
+    font-size: 10px;
+}
+
+.perspectived a:hover p, .perspectived a.hover p {
+    margin-top: -100px;
+}
+
+.perspectived a p.selected {
+    margin-top: -343px;
+}
+
+.perspectived a:hover p.selected, .perspectived a.hover p.selected {
+    margin-top: -343px;
+}
+
+.corner {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #ccc;
+    z-index: 20;
+    margin-left: -5px;
+    margin-top: -5px;
+    cursor: move;
+}
+
+footer {
+    clear: both;
+    display: block;
+    height: 70px;
+    width: 750px;
+    margin: 0px auto 20px;
+    padding-top: 120px;
+}
+
+footer h3 {
+    padding-bottom: 0px;
+    padding-right: 10px;
+    margin-top: -5px;
+    float: left;
+}
+
+footer a {
+    color: #950098;
+}
+
+#wonder-hide {
+    position: absolute;
+    background-color: #000;
+    z-index: 200;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+#wonder-content {
+    position: absolute;
+    z-index: 400;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+#wonder-content a, #wonder-content a:visited {
+    float: left;
+    font-size: 20px;
+    background-color: #000;
+    padding: 20px 20px;
+    margin: 0px 0px 20px 20px;
+    color: #fff;
+}
+
+#wonder-content header {
+    clear: both;
+    float: left;
+    width: 100%;
+    padding: 20px 0 0 20px;
+    text-align: center;
+    font-size: 75px;
+    color: #fff;
+    height: auto;
+}
+
+#wonder-content header span {
+    font-size: 30px;
+}
+
+#wonder-content img {
+    clear: both;
+    margin: 40px 20px;
+    -webkit-box-shadow: 1px 1px 8px #000;
+    -moz-box-shadow: 1px 1px 8px #000;
+    box-shadow: 1px 1px 8px #000;
+}
+
+h1 {
+    color: #950098;
+    text-shadow: -2px 2px 0px #fff;
+    font-size: 50px;
+    width: 100%;
+    text-align: center;
+}
