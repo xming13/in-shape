@@ -30,7 +30,7 @@ h1 small {
     position: fixed;
     top: 0;
     right: 0;
-    width: 100px;
+    width: 150px;
     height: 40px;
     opacity: 0.5;
 }
@@ -47,6 +47,19 @@ h1 small {
     text-align: center;
     color: #FFF;
     background-color: #4C77FF;
+}
+
+.theme-select:after {
+    content: '';
+    position: absolute;
+    top: 18px;
+    width: 0;
+    height: 0;
+    margin-left: 10px;
+    vertical-align: middle;
+    border-top: 4px solid;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
 }
 
 .theme ul {
@@ -72,20 +85,9 @@ h1 small {
 .theme ul li.selected:before {
     content: '\2713';
     position: absolute;
-    left: 5px;
+    left: 10px;
     font-size: 23px;
     color: #C9FF00;
-}
-
-.caret {
-    display: inline-block;
-    width: 0;
-    height: 0;
-    margin-left: 4px;
-    vertical-align: middle;
-    border-top: 4px solid;
-    border-right: 4px solid transparent;
-    border-left: 4px solid transparent;
 }
 
 #element-wrapper {
@@ -197,6 +199,12 @@ h1 small {
     color: #111;
     font-size: 20px;
     line-height: normal;
+}
+
+.mirror-left img,
+.mirror-right img {
+    width: 200px;
+    height: 200px;
 }
 
 em {

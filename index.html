@@ -11,7 +11,7 @@
     <meta name="language" content="en" />
 
     <meta name="robots" content="index" />
-    <meta name="viewport" content="width=1200, user-scalable=no" />
+    <meta name="viewport" content="width=1000" />
 
     <link href="favicon.ico" rel="shortcut icon" />
 
@@ -45,8 +45,7 @@
     <section class="theme">
         <a href="#" class="theme-select">
             Theme
-            <span class="caret"></span>
-        </a>
+            </a>
         <ul>
             <li class="theme--basic">Basic</li>
             <li class="theme--xmas">Xmas</li>
@@ -158,7 +157,7 @@
                 var selectedTheme = $(this).html().trim().toLowerCase();
 
                 $('.element a img').each(function() {
-                    var imgName = this.src.substring(this.src.lastIndexOf('/'));
+                    var imgName = this.src.substring(this.src.lastIndexOf('/') + 1);
                     this.src = 'images/' + selectedTheme + '/' + imgName;
                 });
 

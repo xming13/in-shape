@@ -2947,7 +2947,15 @@ REAL.WonderItem = function (config) {
 
         // xming
 //        REAL.events.dispatch(REAL.WonderItemClick, { item: _that, element: $(this), title: $(this).find("p").html(), img: $(this).find("img").attr("src"), colour: $(this).find("p").css("background-color") });
-        REAL.events.dispatch(REAL.WonderItemClick, { item: _that, element: $(this), title: $(this).find(".hero-name").html(), quote: $(this).find(".hero-quote").html(), img: $(this).find("img").attr("src"), colour: $(this).find("p").css("background-color") });
+        REAL.events.dispatch(REAL.WonderItemClick, {
+            item: _that,
+            element: $(this),
+            title: $(this).find(".hero-name").html(),
+            quote: $(this).find(".hero-quote").html(),
+            img: $(this).find("img").attr("src"),
+            imgBgColor: $(this).css("background-color"),
+            bgColor: $(this).find("p").css("background-color")
+        });
 
 		// se marca como elegido
 		$(this).css({position: "absolute", left: _leftIni+"px", top: _topIni+"px", zIndex: 300}).find("a p").addClass("selected");
@@ -3262,11 +3270,11 @@ REAL.WonderGrid = function (config) {
 // </section>
 
 		setTimeout(function(){
-			_content.css({top: sT, backgroundColor: e.data.colour}).
+			_content.css({top: sT, backgroundColor: e.data.bgColor}).
 					find("header").html(e.data.title).end().
-					find(".mirror-left img").attr("src", e.data.img).end().
+					find(".mirror-left img").css("background-color", e.data.imgBgColor).attr("src", e.data.img).end().
                     find(".mirror-left p").html(e.data.quote).end().
-                    find(".mirror-right img").attr("src", e.data.img.replace(".png", "-evil.png")).end().
+                    find(".mirror-right img").css("background-color", e.data.imgBgColor).attr("src", e.data.img.replace(".png", "-evil.png")).end().
                     find(".mirror-right p").html(_charQuoteMapped[e.data.title.toLocaleLowerCase()]).end().
 					fadeIn("slow");
 		}, 1000);
