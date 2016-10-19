@@ -43,7 +43,10 @@ h1 small {
 .theme-select:hover {
     display: block;
     height: 40px;
-    font: 16px/40px bold 'Varela Round', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Varela Round', sans-serif;
+    line-height: 40px;
     text-align: center;
     color: #FFF;
     background-color: #4C77FF;
@@ -70,7 +73,10 @@ h1 small {
 
 .theme ul li {
     height: 40px;
-    font: 16px/40px bold 'Varela Round', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Varela Round', sans-serif;
+    line-height: 40px;
     text-align: center;
     color: #FFF;
     background-color: #3024DF;
